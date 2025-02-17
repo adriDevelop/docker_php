@@ -1,0 +1,13 @@
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: darkslateblue;
+  color: whitesmoke;
+}
+
+td, th {
+  border: 0.15em solid darkblue;
+}

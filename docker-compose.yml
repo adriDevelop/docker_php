@@ -1,0 +1,36 @@
+services: 
+  # Apache y PHP
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment: 
+      APACHE_RUN_USER: "#1000"
+      APACHE_RUN_GROUP: "#1000"
+    expose:
+      - 9003
+    volumes:
+      - ./www:/var/www/html/
+      - ./dwes.es:/var/www/dwes.es
+      - ./examen.com:/var/web/examen.com
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+        #      - ./php.ini:/usr/local/etc/php/php.ini
+    extra_hosts:
+    - "host.docker.internal:host-gateway"
+
+    # MySQL
+  mysql:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+

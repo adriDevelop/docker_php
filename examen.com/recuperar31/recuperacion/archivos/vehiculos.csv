@@ -1,0 +1,13 @@
+Tipo,Marca,Antigüedad,ITV
+"Turismo","Fiat",1,Si
+"Turismo","Fiat",2,No
+"Turismo","Opel",3,No
+"Turismo","Opel",3,No
+"Turismo","Mercedes",3,Si
+"Turismo","Mercedes",4,No
+"Furgoneta","Fiat",4,Si
+"Furgoneta","Fiat",5,No
+"Furgoneta","Opel",5,Si
+"Furgoneta","Opel",1,No
+"Furgoneta","Mercedes",2,Si
+"Furgoneta","Mercedes",3,No
