@@ -15,9 +15,6 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 # Instalación de Redis
 RUN pecl install redis
 
-# Habilito redis
-docker-php-ext-enable redis
-
 # Habilitar mod_rewrite
 RUN a2enmod rewrite
 
