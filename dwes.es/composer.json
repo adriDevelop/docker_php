@@ -4,8 +4,7 @@
     },
     "autoload":{
         "psr-4": {
-            "util\\" : "ra8/util",
-            "mvc\\": "ra5/mvc"
+            "pr831\\enrutador\\" : "pr831/enrutador"
         }
     }
 }

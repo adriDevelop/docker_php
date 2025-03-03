@@ -1,0 +1,20 @@
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.container {
+    max-width: 40%;
+  }
+table{
+    margin-top:30px;
+}
+
+.card {
+    height: 300px;
+}
+
+em.error {
+    color: red;
+}

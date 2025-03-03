@@ -13,10 +13,19 @@ services:
       - ./www:/var/www/html/
       - ./dwes.es:/var/www/dwes.es
       - ./examen.com:/var/web/examen.com
+      - ./laravel.local:/var/www/laravel.local
       - ./xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
         #      - ./php.ini:/usr/local/etc/php/php.ini
     extra_hosts:
     - "host.docker.internal:host-gateway"
+
+  composer:
+    image: composer
+    container_name: composer_pr831
+    working_dir: /var/www/dwes.es
+    volumes:
+      - ./dwes.es:/var/www/dwes.es
+    command: install
 
     # MySQL
   mysql:
